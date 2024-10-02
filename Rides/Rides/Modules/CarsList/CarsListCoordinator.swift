@@ -45,10 +45,7 @@ final class CarsListCoordinator: Coordinator {
     }
     
     private func showDetails(car: Car, animated: Bool) {
-        let viewModel = CarDetailsViewModel(car: car)
-        let view = CarDetailsView(viewModel: viewModel)
-        let viewController = HostViewController(contentView: view)
-        
-        navigationController?.pushViewController(viewController, animated: animated)
+        let pageCoordinator = CarDetailsPageCoordinator(car: car, navigationController: navigationController)
+        pageCoordinator.start(animated: animated)
     }
 }
