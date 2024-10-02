@@ -14,8 +14,4 @@ target 'Rides' do
     # Pods for testing
   end
 
-  target 'RidesUITests' do
-    # Pods for testing
-  end
-
 end
