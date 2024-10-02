@@ -30,7 +30,17 @@ struct CarsListView<ViewModel>: View where ViewModel: CarsListViewViewModel {
     var body: some View {
         ZStack {
             VStack {
-                HStack {                    
+                HStack {
+                    TitleText(
+                        style: .small,
+                        text: viewModel.error,
+                        color: .error
+                    )
+                    .padding(.horizontal, 16)
+                    Spacer()
+                }
+
+                HStack {
                     TextField("Enter cars amount".toLocalized(), text: $viewModel.listSize)
                         .textFieldStyle(
                             RoundedTextFieldStyle(
@@ -55,6 +65,7 @@ struct CarsListView<ViewModel>: View where ViewModel: CarsListViewViewModel {
                     }
                     .buttonStyle(BorderedButtonStyle.secondaryButtonStyle)
                     .frame(width: 50, height: 50)
+                    
                 }
                 
                 VStack(spacing: 3) {

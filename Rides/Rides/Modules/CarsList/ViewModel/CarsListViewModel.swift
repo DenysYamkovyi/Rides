@@ -11,7 +11,12 @@ import Foundation
 
 final class CarsListViewModel: CarsListViewViewModel, ObservableObject {
     @Published private(set) var isLoading: Bool = false
-    @Published var listSize: String = ""
+    @Published var listSize: String = "" {
+        didSet {
+            // Clear error message when the input changes
+            error = ""
+        }
+    }
     @Published private(set) var list: [CarRowViewModel] = []
     @Published var sortBy: SortOption = .vin {
         didSet {
@@ -50,7 +55,9 @@ final class CarsListViewModel: CarsListViewViewModel, ObservableObject {
                 self?.isLoading = false
                 switch result {
                 case let .failure(error):
-                    self?.error = error.localizedDescription
+                    print("\(error)")
+                    //uncomment for to error showing
+                    //self?.error = error.localizedDescription
                 case .finished:
                     break
                 }
