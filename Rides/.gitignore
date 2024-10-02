@@ -1,0 +1,72 @@
+# macOS
+.DS_Store
+*.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+
+# Swift Package Manager
+/.build/
+/Packages
+Package.pins
+Package.resolved
+# Xcode 11+ uses a new format for package resolution.
+# See https://forums.swift.org/t/xcode-11-package-resolved-why-committed-into-source-control/21240 for more info.
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# Carthage
+Carthage/Build/
+
+# CocoaPods
+Pods/
+Podfile.lock
+# Avoid Cocoapods generated files from tracking in Git
+project.xcworkspace/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/*.log
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+
+# Logs
+*.log
+
+# User-specific Xcode files
+*.xcuserdatad/
+
+# Swift Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# App-specific files
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# xcresult files
+*.xcresult
+
+# Other build artifacts
+*.o
+*.a
+*.pyc
+*.bin
+
+# Clean up old archives
+*.xcarchive

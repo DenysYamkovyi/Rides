@@ -1,0 +1,11 @@
+//
+//  Debug.xcconfig
+//  RidesSwiftUI_Storyboard
+//
+//  Created by macbook pro on 2024-10-01.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+HOST_URL = https:/$()/random-data-api.com/api/
